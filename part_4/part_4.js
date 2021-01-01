@@ -9,10 +9,23 @@ return 'NO' if the parentheses in the input string are not balanced,.
 
 */
 
-console.log('PART 4');
+console.log("PART 4");
 
-const isABalancedString = () => {
-  // WRITE YOUR CODE BELOW THIS LINE
+const isABalancedString = (str) => {
+  const array = str.split("");
+  for (let i = 0; i < array.length; i++) {
+    if (arr[i] == "(") {
+      arr.splice(indexOf(arr[i]), 1);
+      for (let j = 0; j < array.length; j++) {
+        if (arr[j] == "(") {
+          return "NO";
+        }
+      }
+    } else if (arr[i] == ")") {
+      return "NO";
+    }
+  }
+  return "YES";
 };
 
 /*
