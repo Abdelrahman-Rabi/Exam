@@ -1,12 +1,21 @@
 const express = require("express");
 const axios = require("axios");
-const db = require("connection");
+import connection from "./db";
 const app = express();
 
-axios.post("/books", (req, res) => {
-  const query =
-    "INSTER INTO books (title , author, pages, publisher, published_at) VALUES (?,?,?,?)";
-});
+insertBook = function () {
+  const bookData = { title: "booktitle", author: "book Author" };
+  axios.post("/books", (req, res) => {
+    const query =
+      "INSTER INTO books (title , author, pages, publisher, published_at) VALUES (?,?,?,?)";
+  });
+};
+
+getAllBooks = function () {
+  axios.get("/books", (req, res) => {
+    const qurey = "SELECT * FROM books";
+  });
+};
 
 const port = 3000;
 app.listen(port, () => {
